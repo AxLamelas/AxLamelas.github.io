@@ -30,7 +30,7 @@
         <section class="wave">
             <h1>Equação da onda</h1>
 
-            <p>A equação da onda, \(\frac {\partial^{2}u}{\partial t^{2}}=c^{2}\nabla^{2}u\), é uma equação diferencial parcial que aparece com muita frequência na descrição de fenómeno físicos como ondas sonoras, luminosa, aparecendo em diversas áreas como a acústica, eletromagnétismo, dinâmica de fluídos, física de plasmas, relatividade geral, entre outras. A sua versão a uma dimensão aprace quando consideramos a oscilação de uma massa em torno de um ponto de equilíbrio devido a uma mola com um comportamento dado pela lei de Hooke.</p>
+            <p>A equação da onda, \(\frac {\partial^{2}u}{\partial t^{2}}=c^{2}\nabla^{2}u\), é uma equação diferencial parcial que aparece com muita frequência na descrição de fenómeno físicos como ondas sonoras, luminosa, aparecendo em diversas áreas como a acústica, eletromagnetismo, dinâmica de fluídos, física de plasmas, relatividade geral, entre outras. A sua versão a uma dimensão aprace quando consideramos a oscilação de uma massa em torno de um ponto de equilíbrio devido a uma mola com um comportamento dado pela lei de Hooke.</p>
             <img src="imagens\hooke.svg" alt="Oscilação de uma massa em torno do ponto de equilíbrio h devido a uma mola de constante k">
             
             <section class="derivação">
@@ -52,6 +52,19 @@
             <section class="solucao-geral">
                 <p>Dado que a equação é linear e homogénea, para obter uma solução geral podemos aplicar o método das variáveis separáveis:</p>
 
+                <p>
+                        Equação da onda a três dimensões:$$\frac {\partial^{2}u}{\partial t^{2}}=v^{2}\left ({\frac {\partial^{2}u}{\partial x^{2}}+\frac {\partial^{2}u}{\partial y^{2}}+\frac {\partial^{2}u}{\partial z^{2}}}\right )$$
+                        Assumindo: $$\left ({x,y,z,t}\right )=a\left ({x}\right )b\left ({y}\right )c\left ({z}\right )d\left ({t}\right ),$$ com \(a\left ({x}\right )\),\(b\left ({y}\right )\),\(c\left ({z}\right )\) diferentes de 0 de modo à solução não ser a solução trivial \(u\left ({x,y,z,t}\right )=0\).<br>
+                        Calculando as derivadas necessárias para a equação: $$u_{xx}=bcda''u_{yy}=acdb''u_{zz}=abdc''u_{tt}=abcd''Substituindonaequação:abcd''=v^{2}\left ({bcda''+acdb''+abdc''}\right )$$ Dividindo por abcd: $$\frac {d''}{d}=v^{2}\frac {a''}{a}+v^{2}\frac {b''}{b}+v^{2}\frac {c''}{c}$$ O 1º membro depende apenas do tempo e o segundo dependede x,y e z logo:$$\frac {d''}{d}=v^{2}\frac {a''}{a}+v^{2}\frac {b''}{b}+v^{2}\frac {c''}{c}=k_{1}$$ Reorganizando e repetindo este raciocínio obtem-se um sistemade equações diferenciais ordinárias:$$\frac {d''}{d}=k_{1}\frac {a''}{a}=\frac {k_{2}}{v^{2}}\frac {b''}{b}=\frac {k_{3}}{v^{2}}\frac {c''}{c}=\frac {k_{1}-k_{2}-k_{3}}{v^{2}}$$ As soluções deste sistema dependem do valor das constantes de separação. Analisando a primeira equação:$$d''=k_{1}d\Leftrightarrow \frac {\partial }{\partial t^{2}}d=k_{1}d$$Isto é, \(d\left ({t}\right )\)é uma função propria do operador da segunda derivada,com valor próprio associado \(k_{1}\),assim sendo \(k_{1}\neq 0\). Repentindo o racioncínio obtemos,a solução geral:$$u\left ({x,y,z,t}\right )=\left ({c_{1}e^{\sqrt{k_{1}}t}+c_{2}e^{-\sqrt{k_{1}}t}}\right )\left ({c_{3}e^{\frac {\sqrt{k_{2}}}{v}x}+c_{4}e^{-\frac {\sqrt{k_{2}}}{v}x}}\right )\left ({c_{5}e^{\frac {\sqrt{k_{3}}}{v}y}+c_{6}e^{-\frac {\sqrt{k_{3}}}{v}y}}\right )\left ({c_{7}e^{\frac {\sqrt{k_{1}-k_{2}-k_{3}}}{v}z}+c_{8}e^{-\frac {\sqrt{k_{1}-k_{2}-k_{3}}}{v}z}}\right )$$Onde as constantes dependem das condições de fronteira.
+                </p>
+
+            </section>
+
+            <section class="exemplos">
+                <h2>Solução com condições de fronteira</h2>
+                <p>
+                        No caso a uma dimensão, para \(v=1\) e as seguintes condições iniciais:$$u\left ({0,t}\right )=0u\left ({l,t}\right )=0u\left ({x,0}\right )=sin\left ({x}\right )u_{t}\left ({x,0}\right )=0$$ Podemos obter uma solução particular a partirda solução geral \(u\left ({x,t}\right )=\left ({c_{1}e^{\sqrt{λ}t}+c_{2}e^{-\sqrt{λ}t}}\right )\left ({c_{3}e^{\sqrt{λ}x}+c_{4}e^{-\sqrt{λ}x}}\right )\) resolvendo o sistema anterior.<br> A solução particular é dada por \(u\left ({x,t}\right )=\frac {cos\left ({t}\right )sin\left ({x}\right )}{2}\).    
+                </p>
             </section>
         </section>
 
