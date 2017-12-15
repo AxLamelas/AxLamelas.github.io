@@ -25,9 +25,36 @@
 
         <p>
             Dada uma equação da forma: $$A\frac {\partial^{2}u}{\partial x^{2}}+2B\frac {\partial^{2}u}{\partial y\partial x}+C\frac {\partial^{2}u}{\partial y^{2}}+\left (\text{termos de menor ordem}\right )=0$$
-            Esta pode ser classificada pelo valore \(B^{2}-AC\). Se este for maior que \(0\) a equação é dita hiperbólica, se for igual a \(0\) é dita parabólica e se for menor que \(0\) é dita elíptica.
+            Esta pode ser classificada pelo discriminante \(B^{2}-AC\). Se este for maior que \(0\) a equação é dita hiperbólica, se for igual a \(0\) é dita parabólica e se for menor que \(0\) é dita elíptica.
         </p>
-        <section class="wave"></section>
+        <section class="wave">
+            <h1>Equação da onda</h1>
+
+            <p>A equação da onda, \(\frac {\partial^{2}u}{\partial t^{2}}=c^{2}\nabla^{2}u\), é uma equação diferencial parcial que aparece com muita frequência na descrição de fenómeno físicos como ondas sonoras, luminosa, aparecendo em diversas áreas como a acústica, eletromagnétismo, dinâmica de fluídos, física de plasmas, relatividade geral, entre outras. A sua versão a uma dimensão aprace quando consideramos a oscilação de uma massa em torno de um ponto de equilíbrio devido a uma mola com um comportamento dado pela lei de Hooke.</p>
+            <img src="imagens\hooke.svg" alt="Oscilação de uma massa em torno do ponto de equilíbrio h devido a uma mola de constante k">
+            
+            <section class="derivação">
+                <p>
+                    Pela lei de Hooke,a força na massa central é: $$F=k\left [{u\left ({x+2h,t}\right )-u\left ({x+h,t}\right )}\right ]-k\left [{u\left ({x+h,t}\right )-u\left ({x,t}\right )}\right ]$$
+                    Pela 2ª lei de Newton: $$F=ma=m \frac {\partial^{2}u\left ({x+h,t}\right )}{\partial t^{2}}$$ Combinando as duas equações:$$\frac {\partial^{2}u\left ({x+h,t}\right )}{\partial t^{2}}=k\left [{u\left ({x+2h,t}\right )-2u\left ({x+h,t}\right )+u\left ({x,t}\right )}\right ]$$
+                    Extendendo a N massas obtemos uma distância total \(L=Nh\),uma massa total \(M=Nm\),e uma constante da mola total de \(K=\frac {k}{N}.\)Substituindo na equação:$$\frac {\partial^{2}u\left ({x+h,t}\right )}{\partial t^{2}}=\frac {KL^{2}}{M}\frac {\left [{u\left ({x+2h,t}\right )-2u\left ({x+h,t}\right )+u\left ({x,t}\right )}\right ]}{h^{2}}$$ No limite quando h tende para 0:$$\frac {\partial^{2}u\left ({x+h,t}\right )}{\partial t^{2}}=\frac {KL^{2}}{M}\frac {\partial^{2}u\left ({x,t}\right )}{\partial x^{2}}$$
+                </p>
+            </section>
+            
+            <section class="classificacao">
+                <h2>Classificação</h2>
+                <p>A equação da onda pode ser escrita: \(Lu=0\), com \(L=\frac {\partial^{2}}{\partial t^{2}}-c^{2}\nabla^{2}\).<br>
+                Como L é obtido pela composição de operadores lineares (derivadas) é também um operador linear. Também pelas propriedades concluí-se que a equação é homogénea.</p>
+                <p>Calculando o discriminante obtemos \(c^{2}\), logo a equação da onda é uma equação parcial linear, homogénia e hiperbólica de segunda ordem. </p>
+                <p>Dado que esta equação é hiperbólica podemos afirmar que, para obter um solução unica, são necessárias condições de fronteira de Cauchy, ou seja, é necessário conhecer tanto o valor, como a primeira derivada da variável dependente, \(u\), na fronteira.  </p>
+            </section> 
+
+            <section class="solucao-geral">
+                <p>Dado que a equação é linear e homogénea, para obter uma solução geral podemos aplicar o método das variáveis separáveis:</p>
+
+            </section>
+        </section>
+
         
         
         
