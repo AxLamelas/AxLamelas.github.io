@@ -2,14 +2,57 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  
+
+
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.9); 
+    text-align: center;
+}
+
+.container > span > h1{
+    font-size: 4em;
+    margin: 0.6em;
+
+}
+.container > span > h2{
+    font-size: 2.5em;
+    margin: 0.6em;
+
+}
+
+
+h1{
+    font-size: 2em;
 }
 
 h1,h2{
-    margin: 2rem;
+    margin: 2em;
+}
+
+h3{
+    font-size: 1.1em;
 }
 
 main{
-    padding: 0 20%;
+    padding: 10% 15% 0 15%;
+    background-color:#eee; 
+    
 }
 
 .hooke{
@@ -21,17 +64,28 @@ main{
     transform: translate(-50%,-50%);
 }
 
+.exemplos > img {
+    margin: 20px 0 0 0;    
+}
+
 .aplicacoes{
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-areas: 
     "som musica"
     "luz luz";
+    justify-items: center;
+}
+
+#apl{
+    margin-bottom: 0px;
 }
 
 .aplicacoes > div {
-    padding: 10%;
+    padding: 0 10% 10% 10%;
 }
+
+
 
 .som{
     grid-area: som;
@@ -43,4 +97,31 @@ main{
 
 .luz{
     grid-area: luz;
+}
+
+h3{
+    margin: 5% 0 0 0;
+}
+
+footer {
+    padding: 10px 5%;
+    background-color:#343942;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}   
+
+footer > ul {
+    list-style: none;
+}
+
+footer > ul > li {
+    font-size: 0.7em; 
+}
+
+
+footer > img {
+    width: 20%;
 }

@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-
+    <title>Equações Diferenciais Parciais</title>
+    
 </head>
 <body>
     <header>
-        <section class="slideshow"></section>
+        <section class="slideshow">
+            <div class="container">
+            <img class="slide"\>
+            <span><h1>Equações Diferenciais Parciais</h1>
+            <h2>A equação da onda</h2></span>
+        </div>
+        </section>
         
         
         
@@ -64,32 +70,42 @@
             </section>
 
             <section class="exemplos">
-                <h2>Solução com condições de fronteira</h2>
+                <h2>Solução com condições de fronteira</h2>                
                 <p>
-                        No caso a uma dimensão, para \(v=1\) e as seguintes condições iniciais:$$u\left ({0,t}\right )=0u\left ({l,t}\right )=0u\left ({x,0}\right )=sin\left ({x}\right )u_{t}\left ({x,0}\right )=0$$ Podemos obter uma solução particular a partirda solução geral \(u\left ({x,t}\right )=\left ({c_{1}e^{\sqrt{λ}t}+c_{2}e^{-\sqrt{λ}t}}\right )\left ({c_{3}e^{\sqrt{λ}x}+c_{4}e^{-\sqrt{λ}x}}\right )\) resolvendo o sistema anterior.<br> A solução particular é dada por \(u\left ({x,t}\right )=\frac {cos\left ({t}\right )sin\left ({x}\right )}{2}\).    
-                </p>
+                        No caso a uma dimensão, para \(v=1\) e as seguintes condições iniciais:$$u\left ({0,t}\right )=0u\left ({l,t}\right )=0u\left ({x,0}\right )=sin\left ({x}\right )u_{t}\left ({x,0}\right )=0$$ Podemos obter uma solução particular a partirda solução geral \(u\left ({x,t}\right )=\left ({c_{1}e^{\sqrt{λ}t}+c_{2}e^{-\sqrt{λ}t}}\right )\left ({c_{3}e^{\sqrt{λ}x}+c_{4}e^{-\sqrt{λ}x}}\right )\) resolvendo o sistema anterior.<br> A solução particular é dada por \(u\left ({x,t}\right )=\frac {cos\left ({t}\right )sin\left ({x}\right )}{2}\).
+                    </p>
+            
+                <img src="imagens/wave.gif"\>
+
                 <h3>Para a verificar a influência das condições iniciais no resultado obtido está dísponível esta <a href="http://math.uchicago.edu/~luis/pde/wave.html">página</a></h3>
+           
+
             </section>
 
+            <h1 id="apl">Aplicações</h1>
             <section class="aplicacoes">
-                <div class="som">
-                    <h2>Propagação do som no ar</h2>
-                    <p> Considerando a equação do gás ideal, a conservação da massa, a conservação do momento linear,e que o processo é adiabático podemos obter a equação$$\frac {\partial^{2}p}{\partial x^{2}}=c^{2}\nabla^{2}p,$$com \(c=\sqrt{\frac {B}{ρ_{0}}},p\equiv P-P_{0}\) (pressão relativa), \(B\equiv \frac {ρ-ρ_{0}}{ρ_{0}}\) (módulo volúmico). <br> Para a progragação do som no ar, ou seja, o som é uma onda, que se propaga a velocidade\(\sqrt{\frac {B}{ρ_{0}}}\) por variações de pressão do meio.
-                    </p>
-                </div>    
-                <div class="musica">
-                    <h2>Determinação da frequência do som produzido pela vibração de um corda (base dos instrumentos de cordas)</h2>
-                    <p>
-                        Analisando a vibração de uma corda de densidade linear μ,sobre tensão T obtem-se que a variação em relação a um ponto de equilíbrio é dado por:$$\frac {\partial^{2}y}{\partial x^{2}}=\frac {μ}{T}\frac {\partial^{2}y}{\partial t^{2}}$$ Isto é uma onda que se propaga na corda com velocidade \(v=\sqrt{\frac {T}{μ}}\). <br> Como \(v=λf\Leftrightarrow f=\frac {v}{λ}=\frac {n}{2L}\sqrt{\frac {T}{μ}}\) é a frequência do som produzido para cada harmónico.
-                    </p>
-                </div>
-
-                <div class="luz">
-                    <h2>Propagação da luz no vácuo</h2>
-                    <p>
-                        Partindo das leis de Faraday e de Ampere no vácuo:$$\nabla \times E=-\frac {\partial B}{\partial t}\nabla \times B=μ_{0}ε_{0}\frac {\partial B}{\partial t}$$ Aplicando o rotacional à lei de Faraday $$\nabla \times \left ({\nabla \times E}\right )=-\frac {\partial \nabla \times B}{\partial t}$$ Como \(\nabla \times \left ({\nabla \times A}\right )=\nabla \left ({\nabla \cdot A}\right )-\nabla^{2}A\) e \(\nabla \cdot E=\nabla \cdot B=0\) pela lei de Gauss no vácuo obtemos: $$\nabla^{2}E=μ_{0}ε_{0}\frac {\partial^{2}E}{\partial t^{2}};\nabla^{2}B=μ_{0}ε_{0}\frac {\partial^{2}B}{\partial t^{2}}$$ Que descreve o modo de propagação da luz no vazio (por oscilações do campo eletromagnético) e também a sua velocidade \(C=\frac {1}{\sqrt{μ_{0}ε_{0}}}\).
-                    </p>
-                </div>
+               
+                
+                    <div class="som">
+                            <h2>Propagação do som no ar</h2>
+                            <p> Considerando a equação do gás ideal, a conservação da massa, a conservação do momento linear,e que o processo é adiabático podemos obter a equação$$\frac {\partial^{2}p}{\partial x^{2}}=c^{2}\nabla^{2}p,$$com \(c=\sqrt{\frac {B}{ρ_{0}}},p\equiv P-P_{0}\) (pressão relativa), \(B\equiv \frac {ρ-ρ_{0}}{ρ_{0}}\) (módulo volúmico). <br> Para a progragação do som no ar, ou seja, o som é uma onda, que se propaga a velocidade\(\sqrt{\frac {B}{ρ_{0}}}\) por variações de pressão do meio.
+                            </p>
+                        </div>    
+                        <div class="musica">
+                            <h2>Determinação da frequência do som produzido pela vibração de um corda (base dos instrumentos de cordas)</h2>
+                            <p>
+                                Analisando a vibração de uma corda de densidade linear μ,sobre tensão T obtem-se que a variação em relação a um ponto de equilíbrio é dado por:$$\frac {\partial^{2}y}{\partial x^{2}}=\frac {μ}{T}\frac {\partial^{2}y}{\partial t^{2}}$$ Isto é uma onda que se propaga na corda com velocidade \(v=\sqrt{\frac {T}{μ}}\). <br> Como \(v=λf\Leftrightarrow f=\frac {v}{λ}=\frac {n}{2L}\sqrt{\frac {T}{μ}}\) é a frequência do som produzido para cada harmónico.
+                            </p>
+                        </div>
+        
+                        <div class="luz">
+                            <h2>Propagação da luz no vácuo</h2>
+                            <p>
+                                Partindo das leis de Faraday e de Ampere no vácuo:$$\nabla \times E=-\frac {\partial B}{\partial t}\nabla \times B=μ_{0}ε_{0}\frac {\partial B}{\partial t}$$ Aplicando o rotacional à lei de Faraday $$\nabla \times \left ({\nabla \times E}\right )=-\frac {\partial \nabla \times B}{\partial t}$$ Como \(\nabla \times \left ({\nabla \times A}\right )=\nabla \left ({\nabla \cdot A}\right )-\nabla^{2}A\) e \(\nabla \cdot E=\nabla \cdot B=0\) pela lei de Gauss no vácuo obtemos: $$\nabla^{2}E=μ_{0}ε_{0}\frac {\partial^{2}E}{\partial t^{2}};\nabla^{2}B=μ_{0}ε_{0}\frac {\partial^{2}B}{\partial t^{2}}$$ Que descreve o modo de propagação da luz no vazio (por oscilações do campo eletromagnético) e também a sua velocidade \(C=\frac {1}{\sqrt{μ_{0}ε_{0}}}\).
+                            </p>
+                        </div>
+            
+                
             </section>
         </section>
 
@@ -97,7 +113,19 @@
         
         
     </main>
+    <footer>
+        <img src="imagens/ua.png"\>
+        <span>Física Matemática</span>
+        <ul>
+            <li>Afonso Lamelas</li>
+            <li>Diana Pereira</li>
+            <li>Francisco Teixeira</li>
+        </div>
 
+    </footer>
+    
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="main.js"></script>
+    
 </body>
 </html>
